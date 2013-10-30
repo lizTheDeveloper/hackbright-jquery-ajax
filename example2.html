@@ -19,6 +19,20 @@
           min-height: 2000px;
           padding-top: 70px;
         }
+        .complete {
+          background-color: #ddffdd;
+        }
+        .incomplete {
+          background-color: #ffdddd;
+        }
+        .task-complete {
+          border: dashed #aaffdd 4px;
+          margin: 5px 5px 5px 5px;
+        }
+        .task-incomplete {
+          border: dashed #ffaadd 4px;
+          margin: 5px 5px 5px 5px;
+        }
     </style>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -72,14 +86,42 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Menu example</h1>
-        <p>This is a quick example of how to dynamically change the content of the page upon a button click.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" id="taskButton" href="#" role="button">Show Tasks &raquo;</a>
-        </p>
+        <h1>Task List example</h1>
+        <p>We're going to make a task list, where we drag and drop tasks from incomplete, to complete. This requires use of some jQuery UI widgets, as well as a bit of AJAX.</p>
+        </div>
       </div>
-      <div class="tasks-container">
-      </div>
+
+    <div class="row complete">
+            <div class="col-6 col-sm-6 col-lg-4 task-complete">
+              <h2>A Complete Task</h2>
+              <p>This is an example of a complete task </p>
+              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
+            </div><!--/span-->
+    </div>
+    <div class="row incomplete">
+            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
+              <h2>Make the delete button work</h2>
+              <p>Add a click event to the Delete button that deletes tasks by removing the DOM node.</p>
+              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
+              <h2>Make a task Movable</h2>
+              <p>Include this <a href="http://jqueryui.com/sortable/#display-grid">jQuery UI widget</a> called Sortable and make these tasks sortable.</p>
+              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
+              <h2>Make a task Completeable</h2>
+              <p>Using the <a href="http://jqueryui.com/draggable/">Draggable</a> and <a href="http://jqueryui.com/droppable/">Droppable</a> widgets in concert, we need to make tasks completeable. Be sure to change their class when they get dragged into the complete area.</p>
+              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
+              <h2>AJAX Time!</h2>
+              <p><a href="http://api.jqueryui.com/droppable/#event-drop">Listen to the "drop" event</a> on the Droppable widget. On drop, send an update to the server.</p>
+              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
+            </div><!--/span-->
+          </div>
+      </div>     
+
     </div> <!-- /container -->
 
 
@@ -88,17 +130,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $('#taskButton').click(function(e){
-            var tasks = ["Add a click event to each menu button", "When you click any given button, change the HTML of the .container class.", "Create different HTML content for each 'page', inject this HTML into the .container, replacing the content already there."]
-            var ul = $("<ul>");
-            for (var i = 0; i < tasks.length; i++) {
-                var li = $("<li>" + tasks[i] + "</li>");
-                ul.append(li);
-            };
-            //Make tasks show up
-            $('.tasks-container').html(ul)
-        })
-    </script>
   </body>
 </html>
