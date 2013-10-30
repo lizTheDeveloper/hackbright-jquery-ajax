@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Fixed Top Navbar Example for Bootstrap</title>
+    <title>LEARN YOU SOME AJAX</title>
 
     <!-- Bootstrap core CSS -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
@@ -105,7 +105,7 @@
             </div><!--/span-->
             <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
               <h2>Make a task Movable</h2>
-              <p>Include this <a href="http://jqueryui.com/sortable/#display-grid">jQuery UI widget</a> called Sortable and make these tasks sortable.</p>
+              <p>Include this <a href="http://jqueryui.com/sortable/#display-grid">jQuery UI widget</a> called Sortable and make it so these tasks can be moved around. The jQuery UI documentation has lots of examples, so be sure to look around. Read the API documentation as well.</p>
               <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
             </div><!--/span-->
             <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
@@ -116,6 +116,21 @@
             <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
               <h2>AJAX Time!</h2>
               <p><a href="http://api.jqueryui.com/droppable/#event-drop">Listen to the "drop" event</a> on the Droppable widget. On drop, send an update to the server.</p>
+              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
+              <h2>Display all tasks with AJAX</h2>
+              <p>Add all tasks to the page using the <code>/tasks</code> route. Create a box for them, and place them in the correct bucket, depending on whether or not they have been completed.</p>
+              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
+              <h2>Tell the server when you delete things</h2>
+              <p>After you delete a task, send a GET request to the server using the <code>/tasks/delete/&lt;task_id&gt;</code> path.</p>
+              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
+              <h2>Add a task</h2>
+              <p>Create inputs somewhere on the page that allow you to add a task. You'll need a title and a description, then send it via POST to the <code>/tasks/add</code> path.</p>
               <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
             </div><!--/span-->
           </div>

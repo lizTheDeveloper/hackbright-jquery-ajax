@@ -6,6 +6,10 @@ user_tasks = [{"title":"a task", "description":"A test task", "id":0, "complete"
 
 @app.route("/")
 def example():
+    return render_template("home.html")
+
+@app.route("/1")
+def example():
     return render_template("example.html")
 
 @app.route("/2")
