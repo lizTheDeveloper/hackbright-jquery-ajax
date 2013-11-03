@@ -1,148 +1,203 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
 
-    <title>LEARN YOU SOME AJAX</title>
+		<title>LEARN YOU SOME AJAX</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Bootstrap core CSS -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <style type="text/css">
-        body {
-          min-height: 2000px;
-          padding-top: 70px;
-        }
-        .complete {
-          background-color: #ddffdd;
-        }
-        .incomplete {
-          background-color: #ffdddd;
-        }
-        .task-complete {
-          border: dashed #aaffdd 4px;
-          margin: 5px 5px 5px 5px;
-        }
-        .task-incomplete {
-          border: dashed #ffaadd 4px;
-          margin: 5px 5px 5px 5px;
-        }
-    </style>
+		<!-- Custom styles for this template -->
+		<style type="text/css">
+				body {
+					min-height: 2000px;
+					padding-top: 70px;
+				}
+				.complete {
+					background-color: #ddffdd;
+				}
+				.incomplete {
+					background-color: #ffdddd;
+				}
+				.task-complete {
+					border: dashed #aaffdd 4px;
+					margin: 5px 5px 5px 5px;
+				}
+				.task-incomplete {
+					border: dashed #ffaadd 4px;
+					margin: 5px 5px 5px 5px;
+				}
+				.hint {
+					display: hidden;
+				}
+		</style>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
 
-  <body>
+	<body>
 
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Default</a></li>
-            <li><a href="#">Static top</a></li>
-            <li class="active"><a href="#">Fixed top</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+		<!-- Fixed navbar -->
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Project name</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">Nav header</li>
+								<li><a href="#">Separated link</a></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Default</a></li>
+						<li><a href="#">Static top</a></li>
+						<li class="active"><a href="#">Fixed top</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
 
-    <div class="container">
+		<div class="container">
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Task List example</h1>
-        <p>We're going to make a task list, where we drag and drop tasks from incomplete, to complete. This requires use of some jQuery UI widgets, as well as a bit of AJAX.</p>
-      </div>
+			<!-- Main component for a primary marketing message or call to action -->
+			<div class="jumbotron">
+				<h1>Task List example</h1>
+				<p>We're going to make a task list, where we drag and drop tasks from incomplete, to complete. This requires use of some jQuery UI widgets, as well as a bit of AJAX.</p>
+			</div>
 
-    <div class="row complete">
-            <div class="col-6 col-sm-6 col-lg-4 task-complete">
-              <h2>A Complete Task</h2>
-              <p>This is an example of a complete task </p>
-              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
-            </div><!--/span-->
-    </div>
-    <div class="row incomplete">
-            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
-              <h2>Make the delete button work</h2>
-              <p>Add a click event to the Delete button that deletes tasks by removing the DOM node.</p>
-              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
-              <h2>Make a task Movable</h2>
-              <p>Include this <a href="http://jqueryui.com/sortable/#display-grid">jQuery UI widget</a> called Sortable and make it so these tasks can be moved around. The jQuery UI documentation has lots of examples, so be sure to look around. Read the API documentation as well.</p>
-              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
-              <h2>Make a task Completeable</h2>
-              <p>Using the <a href="http://jqueryui.com/draggable/">Draggable</a> and <a href="http://jqueryui.com/droppable/">Droppable</a> widgets in concert, we need to make tasks completeable. Be sure to change their class when they get dragged into the complete area.</p>
-              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
-              <h2>AJAX Time!</h2>
-              <p><a href="http://api.jqueryui.com/droppable/#event-drop">Listen to the "drop" event</a> on the Droppable widget. On drop, send an update to the server.</p>
-              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
-              <h2>Display all tasks with AJAX</h2>
-              <p>Add all tasks to the page using the <code>/tasks</code> route. Create a box for them, and place them in the correct bucket, depending on whether or not they have been completed.</p>
-              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
-              <h2>Tell the server when you delete things</h2>
-              <p>After you delete a task, send a GET request to the server using the <code>/tasks/delete/&lt;task_id&gt;</code> path.</p>
-              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4 task-incomplete">
-              <h2>Add a task</h2>
-              <p>Create inputs somewhere on the page that allow you to add a task. You'll need a title and a description, then send it via POST to the <code>/tasks/add</code> path.</p>
-              <p><a class="btn btn-default" href="#" role="button">Delete</a></p>
-            </div><!--/span-->
-          </div>
-      </div>     
+		<div class="row complete">
+			<div class="col-6 col-sm-6 col-lg-4 task-complete">
+				<h2>A Complete Task</h2>
+				<p>This is an example of a complete task </p>
+				<p><div class="btn btn-default" href="#" role="button">Delete</div></p>
+			</div>
+		</div>
 
-    </div> <!-- /container -->
+		<div class="row incomplete">
+			<div class="col-6 col-sm-6 col-lg-4 task-incomplete">
+				<h2>Make the delete button work</h2>
+				<p>Add a click event to the Delete button that deletes tasks by removing the DOM node.</p>
+				<div class="btn btn-default" href="#" role="button">Delete</div>
+				<div class="btn btn-success" href="#" role="button">Hint</div>
+				<div class="hint well">
+					<p>First, target <em>all</em> of the buttons. Take a look at the HTML for the button - notice that they are actually <code>&lt;div&gt;</code> tags that have a class, <code>.btn</code>. There are hint buttons, so to effectively target them you'll probably want to add another class that distinquishes them from the hint button.</p>
+					<p>Next, you need to add a click event. Do this by calling the .click method on the collection.</p>
+					<p>.click() takes a function as it's argument, so make it look like this:</p>
+					<code>
+						.click(function(theEvent){<br>
+							// delete the DOM node here.<br>
+						});<br>
+					</code>
+					<p>theEvent is an argument passed to the callback by the click function. It has a property, .currentTarget, which will tell you the actual element that got clicked. If you'd like to look at all of the properties, console.log the object by itself. </p>
+					<code>console.log(theEvent)</code>
+					<p>The next step is to delete the element - remember, we don't want to delete the delete button, but it's <a href="http://api.jquery.com/parent/">parent container</a>. Read the <a href="http://api.jquery.com/remove/">documentation here</a> for how to remove nodes from the DOM.</p>
+				</div>
+			</div><!--/span-->
+			<div class="col-6 col-sm-6 col-lg-4 task-incomplete">
+				<h2>Make a task Completeable, or Un-Completeable</h2>
+				<p>Using the <a href="http://jqueryui.com/draggable/">Draggable</a> and <a href="http://jqueryui.com/droppable/">Droppable</a> widgets in concert, we need to make tasks completeable.</p>
+				<div class="btn btn-default" href="#" role="button">Delete</div>
+				<div class="btn btn-success" href="#" role="button">Hint</div>
+				<div class="hint well">
+					<p>First, notice that we've included the jQuery-UI javascript library. This is a standard library for implementing many common tasks, like drag and drop.</p>
+					<p>We're going to be using <a href="http://jqueryui.com/draggable/">Draggable</a> and <a href="http://jqueryui.com/droppable/">Droppable</a> so open these links up in your browser.</p>
+					<p>The first thing is making tasks Draggable, so we need to select the DOM nodes we want to be draggable (.task-incomplete and .task-complete), and then call the <code>.draggable</code> method on them. This enables them to be moved around the page. </p>
+					<code>$('.task-incomplete .task-complete').draggable();</code>
+					<p>Next, we need to have some way to "drop" DOM nodes onto another DOM node. We'll have to <a href="http://api.jqueryui.com/droppable/#event-drop">use events</a> for this, as well as designating a node to be the drop target.</p>
+					<p>Here's an example of designating complete as a drop target:</p>
+					<code>$('.complete').droppable()</code>
+					<p>Now, we need to make something happen when things are dropped upon it. We're going to call this method our droppable node to make it listen to "drop" events.</p>
+					<code>.on("drop", function(event, ui) {});</code>
+					<p>You'll notice an extra argument in this function, called <code>ui</code>. <a href="http://api.jqueryui.com/droppable/#event-drop">The documentation</a> tells us that the event listener gives us this object.</p>
+					<p>The <code>ui</code> element gives us the ability to tell easily what was dropped by accessing the .draggable property. It points at the DOM node.</p>
+					<p>We need to delete this DOM node, and create a new one with the same contents. Make a new <code>&lt;div&gt;</code>, and add the same classes the old div had, except replace <code>.task-incomplete</code> with <code>.task-complete</code></p>
+					<p>Next, get the contents of the old div, and append them to the new div. Then, append our new div to the <code>droppable</code> target.</p>
+					<p>You'll need to repeat this process in order to mark a task as un-complete.</p>
+				</div>
+			</div><!--/span-->
+			<div class="col-6 col-sm-6 col-lg-4 task-incomplete">
+				<h2>AJAX Time!</h2>
+				<p><a href="http://api.jqueryui.com/droppable/#event-drop">Listen to the "drop" event</a> on the Droppable widget. On drop, send an update to the server.</p>
+				<div class="btn btn-default" href="#" role="button">Delete</div>
+				<div class="btn btn-success" href="#" role="button">Hint</div>
+				<div class="hint well">
+					<p>Time to use some AJAX! We're going to be accessing our own server, so we only need to rely on some simple methods.</p>
+					<p>We need to send a <code>POST</code> request to our API with the data we want to change. We also want to do it only when we actually need to. Let's start by figuring out the answers to the following questions:</p>
+					<ul>
+						<li>Which task we want to update</li>
+						<li>What we want to update it with</li>
+						<li>Where do we send it</li>
+						<li>When do we send it</li>
+					</ul>
+					<p>The first question we have is "which task do we want to update?". We don't have a unique way to refer to each task, so let's first go through and add an id attribute to each task. Add an "id" to each div, and give it a unique number.</p>
+					<p>
+				</div>
+			</div><!--/span-->
+			<div class="col-6 col-sm-6 col-lg-4 task-incomplete">
+				<h2>Display all tasks with AJAX</h2>
+				<p>Add all tasks to the page using the <code>/tasks</code> route. Create a box for them, and place them in the correct bucket, depending on whether or not they have been completed.</p>
+				<div class="btn btn-default" href="#" role="button">Delete</div>
+				<div class="btn btn-success" href="#" role="button">Hint</div>
+			</div><!--/span-->
+			<div class="col-6 col-sm-6 col-lg-4 task-incomplete">
+				<h2>Tell the server when you delete things</h2>
+				<p>After you delete a task, send a GET request to the server using the <code>/tasks/delete/&lt;task_id&gt;</code> path.</p>
+				<div class="btn btn-default" href="#" role="button">Delete</div>
+				<div class="btn btn-success" href="#" role="button">Hint</div>
+			</div><!--/span-->
+			<div class="col-6 col-sm-6 col-lg-4 task-incomplete">
+				<h2>Add a task</h2>
+				<p>Create inputs somewhere on the page that allow you to add a task. You'll need a title and a description, then send it via POST to the <code>/tasks/add</code> path.
+				<div class="btn btn-default" href="#" role="button">Delete</div>
+				<div class="btn btn-success" href="#" role="button">Hint</div>
+			</div><!--/span-->
+		</div>
+	</div>    <!-- /container --> 
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$('.hint').hide();
+			$('.task-incomplete div.btn-success').click(function(event){
+				//Don't let other events do things after this.
+				event.stopPropagation();
+				//Go up one DOM level, then down, but only get the hint, then show or hide
+				$(event.currentTarget).parent().children().filter('.hint').toggle(500);
+			});
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  </body>
+		</script>
+	</body>
 </html>

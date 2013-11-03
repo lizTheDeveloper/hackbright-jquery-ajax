@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import json
 app = Flask(__name__)
 
-user_tasks = [{"title":"a task", "description":"A test task", "id":0, "complete": False}]
+user_tasks = [{"title":"a task", "description":"A test task", "id":0, "complete": False}, {"title":"HAHA IT WORKS", "description":"Another test task", "id":1, "complete": False}]
 
 @app.route("/")
 def home():
@@ -40,6 +40,14 @@ def del_task(task_id):
         if user_tasks[i]["id"] == task_id:
             del user_tasks[i]
             return "success"
+    return "error - task not found"
+
+@app.route("/tasks/update/<task_id>", methods=["POST"])
+def update_task(task_id):
+    for i in range(0,len(user_tasks)):
+        if user_tasks[i]["id"] == task_id:
+            user_tasks[i].complete = bool(request.form.get("complete", False))
+            return json.dumps(user_tasks[i]);
     return "error - task not found"
 
 
